@@ -33,6 +33,8 @@
             txtPW = new TextBox();
             btnLogin = new Button();
             lblErrorMsg = new Label();
+            chkShowPW = new CheckBox();
+            btnClear = new Button();
             SuspendLayout();
             // 
             // lblAppName
@@ -80,7 +82,7 @@
             btnLogin.BackgroundImageLayout = ImageLayout.None;
             btnLogin.Font = new Font("맑은 고딕", 40F);
             btnLogin.ForeColor = Color.FromArgb(192, 192, 255);
-            btnLogin.Location = new Point(358, 628);
+            btnLogin.Location = new Point(352, 674);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(550, 150);
             btnLogin.TabIndex = 1;
@@ -93,12 +95,38 @@
             lblErrorMsg.AutoSize = true;
             lblErrorMsg.Font = new Font("맑은 고딕", 15F);
             lblErrorMsg.ForeColor = Color.IndianRed;
-            lblErrorMsg.Location = new Point(343, 537);
+            lblErrorMsg.Location = new Point(337, 597);
             lblErrorMsg.Name = "lblErrorMsg";
             lblErrorMsg.Size = new Size(579, 41);
             lblErrorMsg.TabIndex = 4;
             lblErrorMsg.Text = "아이디 또는 비밀번호가 잘못 되었습니다.";
             lblErrorMsg.Visible = false;
+            // 
+            // chkShowPW
+            // 
+            chkShowPW.AutoSize = true;
+            chkShowPW.Font = new Font("맑은 고딕", 15F);
+            chkShowPW.ForeColor = SystemColors.ActiveCaptionText;
+            chkShowPW.Location = new Point(288, 533);
+            chkShowPW.Name = "chkShowPW";
+            chkShowPW.Size = new Size(362, 45);
+            chkShowPW.TabIndex = 5;
+            chkShowPW.Text = "비밀번호를 표시합니다.";
+            chkShowPW.UseVisualStyleBackColor = true;
+            chkShowPW.CheckedChanged += chkShowPW_CheckedChanged;
+            // 
+            // btnClear
+            // 
+            btnClear.BackColor = SystemColors.Info;
+            btnClear.Font = new Font("맑은 고딕", 15F);
+            btnClear.ForeColor = Color.FromArgb(192, 192, 255);
+            btnClear.Location = new Point(733, 523);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(242, 62);
+            btnClear.TabIndex = 6;
+            btnClear.Text = "모두 지우기";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
             // Form1
             // 
@@ -106,6 +134,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1278, 944);
+            Controls.Add(btnClear);
+            Controls.Add(chkShowPW);
             Controls.Add(lblErrorMsg);
             Controls.Add(btnLogin);
             Controls.Add(txtPW);
@@ -125,5 +155,7 @@
         private TextBox txtPW;
         private Button btnLogin;
         private Label lblErrorMsg;
+        private CheckBox chkShowPW;
+        private Button btnClear;
     }
 }

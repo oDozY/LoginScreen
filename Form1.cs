@@ -82,5 +82,26 @@ namespace LoginScreen
                 btnLogin.PerformClick(); // 버튼이눌린것처럼만들기.
             }
         }
+
+        private void chkShowPW_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtPW.Text != "패스워드")
+            {
+                txtPW.UseSystemPasswordChar = !chkShowPW.Checked;
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtID.Text = "아이디";
+            txtID.ForeColor = Color.Silver;
+
+            txtPW.UseSystemPasswordChar = false;
+            txtPW.Text = "패스워드";
+            txtPW.ForeColor = Color.Silver;
+
+            lblErrorMsg.Visible = false;
+            txtID.Focus();
+        }
     }
 }
