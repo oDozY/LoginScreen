@@ -69,7 +69,7 @@ namespace LoginScreen
         {
             if (e.KeyCode == Keys.Enter)
             {
-                e.SuppressKeyPress = true; // 기본비프음방지
+                e.SuppressKeyPress = true; // 기본비프음방지.
                 txtPW.Focus(); // 패스워드입력창이포커스를갖게끔
             }
         }
@@ -78,8 +78,8 @@ namespace LoginScreen
         {
             if (e.KeyCode == Keys.Enter)
             {
-                e.SuppressKeyPress = true; // 기본비프음방지
-                btnLogin.PerformClick(); // 버튼이눌린것처럼만들기
+                e.SuppressKeyPress = true; // 기본비프음방지.
+                btnLogin.PerformClick(); // 버튼이눌린것처럼만들기.
             }
         }
     }
